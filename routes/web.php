@@ -10,6 +10,11 @@ Route::get(
     , [AuthController::class, 'login']
     );
 
+Route::post(
+        '/loginSubmit'
+    , [AuthController::class, 'loginSubmit']
+);
+
 Route::get(
         '/logout'
     , [AuthController::class, 'logout']
