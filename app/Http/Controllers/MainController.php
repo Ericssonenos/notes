@@ -20,7 +20,7 @@ class MainController extends Controller
         return view('main.home', compact('user', 'notes'));
     }
     public function newNote(){
-        return view('main.new_Note');
+        return view('main.new_note');
     }
 
     public function newNoteSubmit(Request $request){
