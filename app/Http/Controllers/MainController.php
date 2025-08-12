@@ -50,7 +50,7 @@ class MainController extends Controller
 
         $note = User::find(session('user_id'))->notes()->find($id)->first();
         //dd($note);
-        return view('main.edit_Note', compact('note'));
+        return view('main.edit_note', compact('note'));
     }
     public function deleteNote($id){
 
