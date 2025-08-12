@@ -1,20 +1,23 @@
-<div class="row mb-3 align-items-center">
-    <div class="col">
+<div class="flex items-center justify-between mb-3">
+    <div>
         <a href="{{ route('home') }}">
             <img src="{{ asset('assets/images/logo.png') }}" alt="Notes logo">
         </a>
     </div>
-    <div class="col text-center">
-        A simple <span class="text-warning">Laravel</span> project!
+    <div class="text-center">
+        A simple <span class="text-yellow-500">Laravel</span> project!
     </div>
-    <div class="col">
-        <div class="d-flex justify-content-end align-items-center">
-            <span class="me-3"><i class="fa-solid fa-user-circle fa-lg text-secondary me-3"></i>{{ session('user.username') }}</span>
-            <a href="{{ route('logout') }}" class="btn btn-outline-secondary px-3">
-                Logout<i class="fa-solid fa-arrow-right-from-bracket ms-2"></i>
+    <div>
+        <div class="flex items-center justify-end">
+            <span class="mr-3 flex items-center">
+                <i class="fa-solid fa-user-circle fa-lg text-gray-500 mr-3"></i>
+                {{ session('user.username') }}
+            </span>
+            <a href="{{ route('logout') }}" class="btn border border-gray-400 text-gray-600 hover:bg-gray-50 px-3 py-2 rounded flex items-center">
+                Logout<i class="fa-solid fa-arrow-right-from-bracket ml-2"></i>
             </a>
         </div>
     </div>
 </div>
 
-<hr>
+<hr class="border-gray-300">
