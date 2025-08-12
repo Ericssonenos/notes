@@ -22,6 +22,8 @@ class AppServiceProvider extends ServiceProvider
     {
         if (config('app.env') === 'production') {
             URL::forceScheme('https');
+            // Adicione esta linha para forçar URLs seguras para assets
+            URL::forceRootUrl(config('app.url'));
         }
     }
 }

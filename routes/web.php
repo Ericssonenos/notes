@@ -7,7 +7,7 @@ use App\Http\Middleware\logged;
 use App\Http\Middleware\loggedOut;
 
 //auth routes
-Route::middleware([loggedOut::class])->group(function () {
+//Route::middleware([loggedOut::class])->group(function () {
     Route::get(
         '/login',
         [AuthController::class, 'login']
@@ -17,7 +17,7 @@ Route::middleware([loggedOut::class])->group(function () {
         '/loginSubmit',
         [AuthController::class, 'loginSubmit']
     );
-});
+//});
 
 
 Route::middleware([logged::class])->group(function () {
